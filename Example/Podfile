@@ -1,13 +1,18 @@
 use_frameworks!
 
 platform :ios, '11.0'
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'].to_f < 12.0
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      end
+    end
+  end
+end
 
 target 'FLCharts_Example' do
   pod 'FLCharts', :path => '../'
-
-  target 'FLCharts_Tests' do
-    inherit! :search_paths
-
-    
-  end
+#  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选
+  pod 'GodEye', :configurations => ['Debug']
 end

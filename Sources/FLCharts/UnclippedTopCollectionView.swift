@@ -9,7 +9,7 @@
 import UIKit
 
 /// A horizontal collection view with the top edge unclipped.
-open class UnclippedTopCollectionView: UIView {
+public class UnclippedTopCollectionView: UIView {
     
     let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
@@ -51,7 +51,7 @@ open class UnclippedTopCollectionView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    open override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         clipMask.frame = bounds.insetBy(dx: 0, dy: -50)
     }

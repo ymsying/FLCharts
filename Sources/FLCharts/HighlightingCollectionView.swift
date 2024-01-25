@@ -11,7 +11,7 @@ import Foundation
 
 /// A collection view that displays an UIView when a cell is highlighted.
 /// The user can swipe between cells and the ``HighlightedView`` will update its position and value.
-open class HighlightingCollectionView: UnclippedTopCollectionView {
+public class HighlightingCollectionView: UnclippedTopCollectionView {
     
     /// A mock view of the collection view used to calculate the position of the highlighted view.
     private let mockView = UIView()

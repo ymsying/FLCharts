@@ -176,10 +176,39 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/ANREye/ANREye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ASLEye/ASLEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppBaseKit/AppBaseKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppSwizzle/AppSwizzle.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AssistiveButton/AssistiveButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CrashEye/CrashEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FLCharts/FLCharts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/GodEye/GodEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LeakEye/LeakEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Log4G/Log4G.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NetworkEye.swift/NetworkEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwViewCapture/SwViewCapture.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SystemEye/SystemEye.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/ANREye/ANREye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ASLEye/ASLEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppBaseKit/AppBaseKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AppSwizzle/AppSwizzle.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AssistiveButton/AssistiveButton.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CrashEye/CrashEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ESPullToRefresh/ESPullToRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FLCharts/FLCharts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/FileBrowser/FileBrowser.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LeakEye/LeakEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Log4G/Log4G.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NetworkEye.swift/NetworkEye.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwViewCapture/SwViewCapture.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SystemEye/SystemEye.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
