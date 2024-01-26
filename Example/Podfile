@@ -14,5 +14,5 @@ end
 target 'FLCharts_Example' do
   pod 'FLCharts', :path => '../'
 #  pod 'DoraemonKit/Core', '~> 3.0.4', :configurations => ['Debug'] #必选
-  pod 'GodEye', :configurations => ['Debug']
+  pod 'GodEye', :configurations => ['Debug'], :git => 'git@github.com:zixun/GodEye.git'
 end
